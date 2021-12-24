@@ -14,7 +14,7 @@ import MobileHeader from 'MobileView/MobileHeader'
 import dayjs from 'dayjs'
 
 const Wrapper: FunctionComponent = (props) => (
-  <div className='h-full w-full grid place-items-center overflow-hidden'>
+  <div className='h-full w-full grid place-items-center overflow-hidden bg-blue-900'>
     <MobileView>
       {props.children}
     </MobileView>
