@@ -1,5 +1,4 @@
 import React from 'react'
-import music from 'resources/img/music.svg'
 import search from 'resources/img/search_white.svg'
 import bojji from 'resources/img/bojji.png'
 import bookmark from 'resources/img/bookmark_white.svg'
