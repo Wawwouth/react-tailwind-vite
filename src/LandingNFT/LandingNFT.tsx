@@ -53,8 +53,8 @@ function LandingNFT() {
       </header>
       <main className='flex flex-wrap gap-y-14'>
         {/* Left Panel */}
-        <div className='w-1/2 flex flex-col justify-evenly overflow-hidden'>
-          <div className='flex flex-col gap-2 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold'>
+        <div className='w-full sm:w-1/2 flex flex-col justify-evenly overflow-hidden'>
+          <div className='flex flex-col gap-2 text-4xl md:text-5xl lg:text-6xl font-bold'>
             <span>
               Best&nbsp;
               <span className='bg-clip-text' style={{ background: textGrad, backgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>NFT</span>
@@ -62,7 +62,7 @@ function LandingNFT() {
             <span>Collections for</span>
             <span>Your Future</span>
           </div>
-          <div className='flex flex-col sm:flex-row gap-5 ml-2 max-w-xs text-sm mt-2'>
+          <div className='flex flex-row justify-evenly sm:justify-start gap-5 ml-2 max-w-xs text-sm mt-2'>
             <button
               type='button'
               className='rounded-3xl p-2 px-6 font-semibold'
@@ -88,7 +88,7 @@ function LandingNFT() {
           </div>
         </div>
         {/* Right Panel */}
-        <div className='w-1/2 flex justify-end items-start relative h-full overflow-hidden p-2 sm:p-0'>
+        <div className='w-full sm:w-1/2 flex justify-end items-start relative h-full overflow-hidden p-2 sm:p-0'>
           <div
             className='rounded-full w-full max-w-screen-sm sm:h-full aspect-square relative'
             style={{ background: grad }}
@@ -111,35 +111,35 @@ function LandingNFT() {
                 <span className='font-semibold'>Ends Inc</span>
                 <span className='font-bold'>12 : 24 : 00</span>
                 <div className='rounded-3xl p-[2px] px-3 text-xs font-bold border-white border-[1px] mt-2'>
-                  <button className=''>View NFT</button>
+                  <button>View NFT</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         {/* Bottom Bar */}
-        <div className='w-full h-12 sm:h-16 lg:h-20 
-          grid grid-cols-3
+        <div className='w-full
+          grid grid-cols-1 sm:grid-cols-3
           gap-1
           font-semibold text-xs sm:text-sm lg:text-lg xl:text-2xl'
         >
           <div className='h-full place-content-start flex gap-1 items-center'>
-            <img src={bookmark} className='h-2/3 p-1 sm:h-full aspect-square rounded-full' style={{ background: grad }} />
-            <span className=''>
+            <img src={bookmark} className='h-full p-1 aspect-square rounded-full' style={{ background: grad }} />
+            <span>
               Trusted with 10<br />
               Achievement
             </span>
           </div>
           <div className='h-full place-content-center flex gap-1 items-center'>
-            <img src={shop} className='h-2/3 p-1 sm:h-full aspect-square rounded-full' style={{ background: grad }} />
-            <span className=''>
+            <img src={shop} className='h-full p-1 aspect-square rounded-full' style={{ background: grad }} />
+            <span>
               Easy Buy & Submit<br />
               NFT Art
             </span>
           </div>
           <div className='h-full place-content-end flex gap-1 items-center'>
-            <img src={gift} className='h-2/3 p-1 sm:h-full aspect-square rounded-full' style={{ background: grad }} />
-            <span className=''>
+            <img src={gift} className='h-full p-1 aspect-square rounded-full' style={{ background: grad }} />
+            <span>
               Get Discount Pro<br />
               Membership
             </span>
