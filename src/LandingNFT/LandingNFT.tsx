@@ -11,7 +11,7 @@ const grad = "linear-gradient(90deg, #fe7a7e 0%, #fd9f50 17%, #f4493c 38%, #c467
 const textGrad = "linear-gradient(90deg, rgba(243,69,61,1) 0%, rgba(172,93,157,1) 100%)"
 function LandingNFT() {
   return (
-    <div className="font-['Rubik', sans-serif] 
+    <div className="font-rubik-sans
       min-h-full
       flex flex-col
     bg-[#1f1d21] text-white gap-10
