@@ -1,0 +1,11 @@
+.link.current {
+  border-bottom-width: 2px;
+  border-color: theme('colors.twitch-purple2');
+}
+.link.current * {
+  color: theme('colors.twitch-purple2');
+}
+.link:hover, .link:hover * {
+  color: theme('colors.twitch-purple3');
+  border-color: theme('colors.twitch-purple3');
+}
