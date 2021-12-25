@@ -1,23 +1,37 @@
 import React from 'react'
+import phone from 'resources/img/phone.svg'
+import btc from 'resources/img/btc.svg'
 
+const Twitch = React.lazy(() => import('Twitch/Twitch'))
 const LandingNFT = React.lazy(() => import('LandingNFT/LandingNFT'))
 const Home = React.lazy(() => import('Home/Home'))
 const HomeMobile = React.lazy(() => import('HomeMobile/HomeMobile'))
 
 
 type Route = {
-  path: string,
-  element: JSX.Element
+  path: string;
+  element: JSX.Element;
+  title?: string;
+  icon?: string;
 }
 
 const routes: Route[] = [
   {
+    path: "/twitch",
+    title: "Twitch",
+    element: <Twitch />
+  },
+  {
     path: "/nft",
-    element: <LandingNFT />
+    title: "NFT",
+    element: <LandingNFT />,
+    icon: btc
   },
   {
     path: "/mobile",
-    element: <HomeMobile />
+    title: "Mobile",
+    element: <HomeMobile />,
+    icon: phone
   },
   {
     path: "/",
