@@ -8,4 +8,4 @@ Inspired by Benjamin Code's video :
 ![alt text](https://github.com/Wawwouth/react-tailwind-vite/blob/9e7103ebef1019a61c8d94dfb1f26dc9fdb2d6fd/src/LandingNFT/preview.png)
 
 ## Responsive :
-![alt text](https://github.com/Wawwouth/react-tailwind-vite/blob/0ee8cca0b6773da2289d1845d907181ee194379a/src/LandingNFT/preview_mobile.png)
+![alt text](https://github.com/Wawwouth/react-tailwind-vite/blob/6ebc64d300940465bb8cba5c17f78a7c43e727af/src/LandingNFT/preview_mobile.png)
