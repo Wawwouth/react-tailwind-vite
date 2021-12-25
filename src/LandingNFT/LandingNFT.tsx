@@ -95,7 +95,7 @@ function LandingNFT() {
           >
             <div className='absolute top-0 left-0 bg-contain bg-no-repeat h-full w-2/3' style={{ backgroundImage: `url('${bojji}')` }}></div>
             {/* CARD */}
-            <div className='bg-white bg-opacity-25 rounded-lg flex justify-between items-start p-2 z-0 absolute right-0 top-1/3 sm:top-1/2 text-xs gap-2'>
+            <div className='bg-white bg-opacity-25 rounded-lg flex justify-between items-start p-2 z-0 absolute right-0 top-1/2 text-xs gap-2'>
               <div className='flex flex-col items-center'>
                 <span className='font-semibold'>Current Bid</span>
                 <span className='font-bold'>12.43 ETH</span>
