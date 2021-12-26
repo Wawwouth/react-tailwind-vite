@@ -8,6 +8,7 @@ module.exports = {
         "twitch-gray2": "#18181B",
         "twitch-gray3": "#1F1F23",
         "twitch-gray4": "#3E3E40",
+        "twitch-gray5": "#26262C",
         "twitch-input-gray": "#3E3E40",
         "twitch-tag-gray": "#323234",
         "twitch-purple" : "#772CE8",
