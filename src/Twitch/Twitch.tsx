@@ -1,12 +1,13 @@
-import React from 'react'
 import MaterialIcon from 'shared/MaterialIcon'
 import CategoryCard from './CategoryCard'
-import ChannelCard from './ChannelCard'
 import Tag from './Tag'
 import IconButton from './IconButton'
 import ProfileIcon from './ProfileIcon'
-import StreamerIcon from './StreamerIcon'
 import './Twitch.css'
+import ChannelsList from './ChannelsList'
+import StreamerListItem from './StreamerListItem'
+
+import { data } from './dummy_data'
 
 function Twitch() {
   return (
@@ -14,7 +15,7 @@ function Twitch() {
       h-full w-full bg-twitch-gray text-white overflow-hidden
       flex flex-col
     '>
-      <nav className='bg-twitch-gray2 flex gap-2 px-1 items-center'>
+      <nav className='bg-twitch-gray2 flex gap-1 px-1 items-center'>
         <a href="#" className='grid place-items-center'>
           <MaterialIcon
             name='tv'
@@ -56,31 +57,46 @@ function Twitch() {
       </nav>
       <main className='grow flex min-h-0'>
         <nav className='
+          shrink-0
+          overflow-y-auto
+          lg:w-60
           bg-twitch-gray3 
-          flex 
-          flex-col 
-          gap-2 p-2
-          lg:w-1/6'
+          flex flex-col gap-2
+          '
         >
           <MaterialIcon name="favorite_border" iconType='round'
-            className='text-gray-400'
+            className='lg:hidden text-gray-400'
           />
-          <StreamerIcon />
-          <StreamerIcon />
-          <StreamerIcon />
-          <StreamerIcon />
-          <StreamerIcon />
-          <StreamerIcon />
+          <div className=' hidden lg:flex justify-between items-center pl-3 py-1'>
+            <span className='text-sm font-semibold'>CHAÎNES SUIVIES</span>
+            <IconButton name='first_page' />
+          </div>
+          <div className='space-y-1'>
+            {data.following.map(({streamer, category, viewers, profilePicture}) => (
+              <StreamerListItem key={streamer} streamerName={streamer} category={category} viewers={viewers} />
+            ))}
+          </div>
+          <MaterialIcon name="videocam" iconType='outlined'
+            className='lg:hidden text-gray-400'
+          />
+          <div className=' hidden lg:flex justify-between items-center pl-3 py-1'>
+            <span className='text-sm font-semibold'>CHAÎNES RECOMMANDÉES</span>
+          </div>
+          <div className='space-y-1'>
+            {data.following.map(({streamer, category, viewers, profilePicture}) => (
+              <StreamerListItem key={streamer} streamerName={streamer} category={category} viewers={viewers} />
+            ))}
+          </div>
         </nav>
         <div className='grow flex flex-col px-4 py-8 gap-6 overflow-y-auto'>
           <span className='text-6xl font-bold'>Parcourir</span>
           {/* Categories list */}
           <div className='flex gap-x-2 gap-y-4 flex-wrap'>
-            <CategoryCard name='Jeux' />
-            <CategoryCard name='IRL' />
-            <CategoryCard name='Musique' />
-            <CategoryCard name='Esports' />
-            <CategoryCard name='Créatif' />
+            <CategoryCard name='Jeux' icon="videogame_asset" />
+            <CategoryCard name='IRL' icon="mic" />
+            <CategoryCard name='Musique' icon="headset_mic" />
+            <CategoryCard name='Esports' icon="emoji_events" />
+            <CategoryCard name='Créatif' icon="color_lens" />
           </div>
           {/* Categories or Channels */}
           <div className='flex gap-4'>
@@ -123,15 +139,7 @@ function Twitch() {
             </div>
           </div>
           {/* Channels list */}
-          <div className='flex flex-wrap gap-3'>
-            <ChannelCard />
-            <ChannelCard />
-            <ChannelCard />
-            <ChannelCard />
-            <ChannelCard />
-            <ChannelCard />
-            <ChannelCard />
-          </div>
+          <ChannelsList />
         </div>
       </main>
     </div>
