@@ -8,12 +8,12 @@ export type ServerBannerProps = {
 function ServerBanner({ server }: ServerBannerProps) {
   return (
     <div 
-      className={`${server.banner ? 'items-start aspect-video bg-contain bg-no-repeat' : 'items-center'} 
+      className={`${server.banner ? 'items-start aspect-video bg-contain bg-no-repeat' : 'items-center h-12'} 
         border-b border-discord-gray-6
         `}
       style={{backgroundImage: server.banner ? `url('${server.banner}')` : ''}}
     >
-      <div className="flex items-center h-12 justify-between basis-full py-2 px-4">
+      <div className="flex items-center justify-between basis-full py-2 px-4">
         <span className="font-semibold">{server.name}</span>
         <IconButton name='expand_more' iconClass="h-12 text-discord-gray-2" noHover />
       </div>
