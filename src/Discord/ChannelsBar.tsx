@@ -1,5 +1,5 @@
 import ChannelsListItem from "./ChannelsListItem"
-import { ServerData } from "./dummy_data"
+import { isChannelGroup, ServerData } from "./dummy_data"
 import ProfileFooter from "./ProfileFooter"
 import ServerBanner from "./ServerBanner"
 
@@ -15,8 +15,10 @@ function ChannelsBar({server}: ChannelsBarProps) {
     rounded-tl-xl
     `}>
       <ServerBanner server={server} />
-      <div className="grow">
-        <ChannelsListItem />
+      <div className="grow flex flex-col py-2">
+        {server.channels.map((channel) => (
+          <ChannelsListItem channel={channel} />
+        ))}
       </div>
       <ProfileFooter />
     </div>
