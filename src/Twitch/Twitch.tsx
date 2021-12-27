@@ -95,14 +95,18 @@ function Twitch() {
                     className='outline-none bg-transparent'
                   />
                 </div>
-                <div>
+                <div className='flex items-center flex-wrap gap-x-1.5 gap-y-1'>
+                  <Tag text='Français' size='medium' close />
+                  <Tag text='Français' size='medium' close />
+                  <Tag text='Français' size='medium' close />
+                  <Tag text='Français' size='medium' close />
                   <Tag text='Français' size='medium' close />
                 </div>
               </div>
             </div>
 
             {/* Sorting */}
-            <div className='flex gap-2'>
+            <div className='flex gap-2 items-center'>
               <span>Trier par</span>
               <select
                 name="sort"
