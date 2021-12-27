@@ -1,13 +1,13 @@
 import { ServerData } from "./dummy_data"
 
-export type ServerIconProps = {
+export type ServerIconProps = React.HTMLAttributes<HTMLDivElement> & {
   server: ServerData;
   current?: boolean;
 }
 
-function ServerIcon({ server, current }: ServerIconProps) {
+function ServerIcon({ server, current, ...props }: ServerIconProps) {
   return (
-    <div className="w-full flex items-center content-center relative">
+    <div {...props} className="w-full flex items-center content-center relative">
       {/* Server icon */}
       <div className={`w-full aspect-square cursor-pointer p-1 peer
       [transition:border-radius_linear_0.3s]
