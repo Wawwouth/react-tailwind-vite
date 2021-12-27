@@ -8,7 +8,7 @@ export type ChannelsListItemProps = {
 function ChannelsListItem({ channel }: ChannelsListItemProps) {
   return !isChannelGroup(channel) ? (
     <div className="flex items-center relative
-      text-sms font-semibold text-discord-gray-2
+      text-base font-semibold text-discord-gray-2
       "
     >
       <div className={`
