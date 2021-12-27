@@ -18,7 +18,7 @@ function Twitch() {
         <a href="#" className='grid place-items-center'>
           <MaterialIcon
             name='tv'
-            className='rounded-full p-1 bg-twitch-purple2
+            className='rounded-lg p-1 bg-twitch-purple2
           hover:translate-x-0.5 hover:-translate-y-0.5'
           />
         </a>
