@@ -2,6 +2,7 @@ import React from 'react'
 import phone from 'resources/img/phone.svg'
 import btc from 'resources/img/btc.svg'
 
+const Discord = React.lazy(() => import('Discord/Discord'))
 const Twitch = React.lazy(() => import('Twitch/Twitch'))
 const LandingNFT = React.lazy(() => import('LandingNFT/LandingNFT'))
 const Home = React.lazy(() => import('Home/Home'))
@@ -16,6 +17,11 @@ type Route = {
 }
 
 const routes: Route[] = [
+  {
+    path: "/discord",
+    title: "Discord",
+    element: <Discord />
+  },
   {
     path: "/twitch",
     title: "Twitch",
