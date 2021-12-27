@@ -10,7 +10,7 @@ export type ChannelsBarProps = {
 function ChannelsBar({server}: ChannelsBarProps) {
   return (
     <div className={`
-    hidden sm:flex flex-col w-64 shrink-0 p-1
+    hidden sm:flex flex-col w-64 shrink-0 overflow-hidden
     bg-discord-gray-5 
     rounded-tl-xl
     `}>
