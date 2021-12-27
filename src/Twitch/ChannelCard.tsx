@@ -35,18 +35,18 @@ function ChannelCard({ channel }: ChannelCardProps) {
         </span>
       </div>
       <div className='flex gap-2 place-items-start'>
-        <StreamerIcon className='w-9' />
+        <StreamerIcon className='w-9 sm:w-10' icon={channel.profilePicture} />
         <div className='flex flex-col grow overflow-hidden gap-0.5'>
           <div className='flex justify-between'>
-            <a href="" className='overflow-hidden text-md text-white hover:text-twitch-purple3'>
+            <a href="" className='overflow-hidden text-md text-white hover:text-twitch-purple3 transition-colors ease-in'>
               <p title={channel.title} className='font-semibold whitespace-nowrap text-ellipsis overflow-hidden'>{channel.title}</p>
             </a>
             <IconButton title='Options' name="more_vert" className='h-6' iconClass='text-md' />
           </div>
-          <a href="" className='text-gray-400 hover:text-twitch-purple3'>
+          <a href="" className='text-gray-400 hover:text-twitch-purple3 transition-colors ease-in'>
             <p className='text-xs'>{channel.streamer}</p>
           </a>
-          <a href="" className='text-gray-400 hover:text-twitch-purple3'>
+          <a href="" className='text-gray-400 hover:text-twitch-purple3 transition-colors ease-in'>
             <p className='text-xs'>{channel.category}</p>
           </a>
           <div>
