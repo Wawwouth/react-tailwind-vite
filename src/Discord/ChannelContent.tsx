@@ -15,14 +15,14 @@ function ChannelContent({ channel }: ChannelContentProps) {
     ">
       <div className="flex justify-between py-0.5 h-12
       bg-discord-gray-4 
-        border-b border-discord-gray-6
+        border-b border-discord-gray-7
       ">
         <ChannelHeader channel={channel} />
         {/* SEARCHBAR */}
         <div className="flex items-center justify-between h-12 min-w-[15rem]">
           {/* SEARCH INPUT */}
           <div className="flex justify-between items-center px-2 py-0.5 h-fit
-          bg-discord-gray-6
+          bg-discord-gray-7
             text-xs text-discord-gray-unread
             rounded-md
             "

@@ -9,7 +9,7 @@ function ServerBanner({ server }: ServerBannerProps) {
   return (
     <div 
       className={`${server.banner ? 'items-start aspect-video bg-contain bg-no-repeat' : 'items-center h-12'} 
-        border-b border-discord-gray-6
+        border-b border-discord-gray-7
         `}
       style={{backgroundImage: server.banner ? `url('${server.banner}')` : ''}}
     >

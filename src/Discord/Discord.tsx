@@ -20,7 +20,7 @@ function Discord() {
 
   return (
     <div className='
-      h-full w-full bg-discord-gray-6 text-white overflow-hidden
+      h-full w-full bg-discord-gray-7 text-white overflow-hidden
       flex
     '>
       <ServerBar current={currentServer} onServerSelect={serverSelected} />
