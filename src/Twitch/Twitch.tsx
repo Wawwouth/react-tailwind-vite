@@ -3,19 +3,18 @@ import CategoryCard from './CategoryCard'
 import Tag from './Tag'
 import IconButton from './IconButton'
 import ProfileIcon from './ProfileIcon'
-import './Twitch.css'
-import ChannelsList from './ChannelsList'
-import StreamerListItem from './StreamerListItem'
+import ChannelsGrid from './ChannelsGrid'
+import SideBar from './SideBar'
 
-import { data } from './dummy_data'
+import './Twitch.css'
 
 function Twitch() {
   return (
-    <div className='
+    <div className='twitch-page
       h-full w-full bg-twitch-gray text-white overflow-hidden
       flex flex-col
     '>
-      <nav className='bg-twitch-gray2 flex gap-1 px-1 items-center'>
+      <nav className='bg-twitch-gray2 flex gap-1 px-1 items-center border-b border-black drop-shadow-md space-x-2'>
         <a href="#" className='grid place-items-center'>
           <MaterialIcon
             name='tv'
@@ -23,20 +22,24 @@ function Twitch() {
           hover:translate-x-0.5 hover:-translate-y-0.5'
           />
         </a>
-        <a href="#" 
-        title='Suivis'
-        className='grid place-items-center px-3 py-4 text-white link'>
+        <a href="#"
+          title='Suivis'
+          className='grid place-items-center px-3 sm:px-1 py-4 sm:py-3 text-white link'
+        >
+          <span className='hidden sm:block font-semibold'>Suivis</span>
           <MaterialIcon
             name='favorite_border'
-            className='text-lg'
+            className='text-lg sm:hidden'
           />
         </a>
-        <a href="#" 
-        title='Parcourir'
-        className='grid place-items-center px-3 py-4 text-white link current'>
+        <a href="#"
+          title='Parcourir'
+          className='grid place-items-center px-3 sm:px-1 py-4 sm:py-3 text-white link current'
+        >
+          <span className='hidden sm:block font-semibold'>Parcourir</span>
           <MaterialIcon
             name='content_copy'
-            className='text-lg'
+            className='text-lg sm:hidden'
           />
         </a>
         <IconButton name="more_vert"
@@ -56,38 +59,7 @@ function Twitch() {
         <ProfileIcon className='w-8' />
       </nav>
       <main className='grow flex min-h-0'>
-        <nav className='
-          shrink-0
-          overflow-y-auto
-          lg:w-60
-          bg-twitch-gray3 
-          flex flex-col gap-2
-          '
-        >
-          <MaterialIcon name="favorite_border" iconType='round'
-            className='lg:hidden text-gray-400'
-          />
-          <div className=' hidden lg:flex justify-between items-center pl-3 py-1'>
-            <span className='text-sm font-semibold'>CHAÎNES SUIVIES</span>
-            <IconButton name='first_page' />
-          </div>
-          <div className='space-y-1'>
-            {data.following.map(({streamer, category, viewers, profilePicture}) => (
-              <StreamerListItem key={streamer} streamerName={streamer} category={category} viewers={viewers} />
-            ))}
-          </div>
-          <MaterialIcon name="videocam" iconType='outlined'
-            className='lg:hidden text-gray-400'
-          />
-          <div className=' hidden lg:flex justify-between items-center pl-3 py-1'>
-            <span className='text-sm font-semibold'>CHAÎNES RECOMMANDÉES</span>
-          </div>
-          <div className='space-y-1'>
-            {data.following.map(({streamer, category, viewers, profilePicture}) => (
-              <StreamerListItem key={streamer} streamerName={streamer} category={category} viewers={viewers} />
-            ))}
-          </div>
-        </nav>
+        <SideBar />
         <div className='grow flex flex-col px-4 py-8 gap-6 overflow-y-auto'>
           <span className='text-6xl font-bold'>Parcourir</span>
           {/* Categories list */}
@@ -112,12 +84,15 @@ function Twitch() {
             <div className='flex gap-2 items-center'>
               <span className='min-w-max'>Filtrer par</span>
               <div className='flex flex-wrap gap-x-4 gap-y-2'>
-                <div className='flex items-center gap-2 bg-twitch-input-gray p-1 rounded-md text-sm text-gray-400 grow'>
+                <div className='flex items-center gap-2 bg-twitch-input-gray p-1 rounded-md text-sm text-gray-400 grow
+                    border-2 border-transparent hover:border-gray-600 transition-colors
+                    focus-within:bg-twitch-gray focus-within:!border-twitch-purple2
+                  '>
                   <MaterialIcon name='search' />
                   <input
                     type='text'
                     placeholder='Rechercher des tags'
-                    className='bg-transparent '
+                    className='outline-none bg-transparent'
                   />
                 </div>
                 <div>
@@ -132,14 +107,25 @@ function Twitch() {
               <select
                 name="sort"
                 id="sort"
-                className='bg-twitch-input-gray rounded-md p-1 text-sm font-semibold'
+                className='bg-twitch-input-gray rounded-md p-1 text-sm font-semibold cursor-pointer'
               >
-                <option value="0">Recommandées pour vous</option>
+                <option value="0">
+                  Recommandées pour vous
+                </option>
+                <option value="1">
+                  Spectateurs (décroissant)
+                </option>
+                <option value="2">
+                  Spectateurs (croissant)
+                </option>
+                <option value="3">
+                  Débutées récemment
+                </option>
               </select>
             </div>
           </div>
-          {/* Channels list */}
-          <ChannelsList />
+          {/* Channels grid */}
+          <ChannelsGrid />
         </div>
       </main>
     </div>
