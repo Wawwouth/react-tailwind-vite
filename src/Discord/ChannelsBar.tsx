@@ -15,7 +15,7 @@ function ChannelsBar({server}: ChannelsBarProps) {
     rounded-tl-xl
     `}>
       <ServerBanner server={server} />
-      <div className="grow flex flex-col py-2">
+      <div className="grow flex flex-col py-2 overflow-y-auto [scrollbar-width:none]">
         {server.channels.map((channel) => (
           <ChannelsListItem channel={channel} />
         ))}
