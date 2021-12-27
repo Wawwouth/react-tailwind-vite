@@ -14,6 +14,13 @@ module.exports = {
         "twitch-purple" : "#772CE8",
         "twitch-purple2" : "#BF94FF",
         "twitch-purple3" : "#9256ED",
+        "discord-gray": "#DCDDDE",
+        "discord-gray-2": "#B9BBBE",
+        "discord-gray-3": "#40444B",
+        "discord-gray-4": "#36393F",
+        "discord-gray-5": "#2F3136",
+        "discord-gray-6": "#202225",
+        "discord-blue": "#5865F2",
       },
       fontFamily: {
         "rubik-sans": ['Rubik', 'sans-serif']
