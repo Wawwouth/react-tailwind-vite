@@ -1,1 +1,1 @@
-Reproduction of twitch.tv directory page
+Replication of twitch.tv directory page (for practice purposes)

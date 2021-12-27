@@ -1,4 +1,4 @@
-Integration of Ali Husni's design found on Dribbble :
+Integration of Ali Husni's design found on Dribbble (for practice purposes) :
 - https://dribbble.com/shots/16950858-NFT-Marketplace-Landing-Page-Animation/attachments/12023878?mode=media
 
 Inspired by Benjamin Code's video : 
