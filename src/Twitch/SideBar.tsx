@@ -16,17 +16,19 @@ function SideBar() {
   )
   return (
     <nav className={`
-      shrink-0
+      flex-none
       flex flex-col
       ${expanded ? 'lg:w-60' : ''}
       bg-twitch-gray3 
       `}
     >
+      {/* GROUPED CHANNELS */}
       <div className='flex flex-col grow overflow-y-auto overflow-x-hidden gap-4 py-2'>
         <GroupedChannelsList title='CHAÎNES SUIVIES' icon='favorite_border' expanded={expanded} switchExpand={expandeBtnClicked} />
         <GroupedChannelsList title='CHAÎNES RECOMMANDÉES' icon='videocam' expanded={expanded} />
       </div>
-      <div className={`border-t-gray-500 border-t p-2 hidden ${expanded ? 'lg:grid' : ''} place-items-center`}>
+      {/* SEARCH FRIENDS INPUT */}
+      <div className={`border-t-twitch-gray4 border-t p-2 hidden ${expanded ? 'lg:grid' : ''} place-items-center`}>
         <div className='
         flex gap-1 p-0.5
         text-sm font-semibold
