@@ -37,6 +37,8 @@ export const data: DiscrodDataType = {
       {name: "règles"},
       {name: "THÈMES", channels: [{name: "art"}, {name: "finance", unread: true}, {name: "musiciens"}, {name: "entrepreunariat"}]},
       {name: "ENTRAIDE", channels: [{name: "aide_aux_devoirs"}, {name: "aide_informatique"}, {name: "aide_programmation"}]},
+      {name: "ENTRAIDE2", channels: [{name: "aide_aux_devoirs"}, {name: "aide_informatique"}, {name: "aide_programmation"}]},
+      {name: "ENTRAIDE3", channels: [{name: "aide_aux_devoirs"}, {name: "aide_informatique"}, {name: "aide_programmation"}]},
     ]},
     {name: "Serv 4", banner, channels: []},
     {name: "Serv 5", banner, channels: []},
