@@ -20,6 +20,8 @@ module.exports = {
         "discord-gray-4": "#36393F",
         "discord-gray-5": "#2F3136",
         "discord-gray-6": "#202225",
+        "discord-gray-hover": "#34373C",
+        "discord-gray-unread": "#4F545C",
         "discord-blue": "#5865F2",
       },
       fontFamily: {
