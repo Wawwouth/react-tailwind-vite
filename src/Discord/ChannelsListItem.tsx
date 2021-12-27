@@ -13,6 +13,7 @@ function ChannelsListItem({ channel }: ChannelsListItemProps) {
     >
       <div className={`
         flex grow py-1 mx-2 px-2 gap-1 hover:bg-discord-gray-hover cursor-pointer
+        rounded-sm
         ${channel.unread ? 'text-discord-gray-2' : 'text-discord-gray-unread'}
       `}>
         <MaterialIcon name='numbers' iconType="round" />
