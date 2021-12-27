@@ -13,7 +13,7 @@ function ChannelContent({ channel }: ChannelContentProps) {
     <div className="grow flex flex-col
       bg-discord-gray-4
     ">
-      <div className="flex justify-between py-0.5
+      <div className="flex justify-between py-0.5 h-12
       bg-discord-gray-4 
         border-b border-discord-gray-6
       ">
@@ -49,7 +49,7 @@ function ChannelContent({ channel }: ChannelContentProps) {
       </div>
     </div>
   ) : (
-    <div>NO CHANNEL</div>
+    <div>NO CHANNEL SELECTED</div>
   )
 }
 
