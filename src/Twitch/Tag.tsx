@@ -16,10 +16,11 @@ function Tag(props: TagProps) {
     ${size === 'medium' ? 'py-2' : 'py-2'}
     ${size === 'medium' ? 'text-sm' : 'text-xs'}
     font-semibold text-gray-300 
+    transition-colors
     bg-twitch-tag-gray 
     rounded-2xl w-fit border-2 
     border-twitch-tag-gray
-    ${size === 'small' ? 'hover:bg-twitch-gray4' : 'hover:border-gray-500'}
+    ${size === 'small' ? 'hover:bg-twitch-gray4' : 'hover:border-twitch-gray4'}
     `}
     >
       <p className='leading-none text-center'>{text}</p>
