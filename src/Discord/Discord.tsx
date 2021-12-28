@@ -1,8 +1,7 @@
-import { useCallback, useState } from "react"
-import ChannelContent from "./ChannelContent"
+import { useCallback, useEffect, useState } from "react"
+import ChannelContainer from "./ChannelContainer"
 import ChannelsBar from "./ChannelsBar"
 import ServerBar from "./ServerBar"
-import UsersList from "./UsersList"
 
 import { data } from "./dummy_data"
 
