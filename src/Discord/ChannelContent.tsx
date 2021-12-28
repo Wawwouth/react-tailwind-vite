@@ -35,9 +35,15 @@ function ChannelContent({ channel }: ChannelContentProps) {
             <MaterialIcon name='search' iconType="round" className="" />
           </div>
           {/* INBOX */}
-          <IconButton noHover name='inbox' iconType="round" iconClass="text-discord-gray-2" />
+          <IconButton noHover name='inbox' iconType="round" iconClass="text-discord-gray-2 hover:text-discord-gray
+hover:text-discord-gray
+hover:text-discord-gray
+hover:text-discord-gray" />
           {/* HELP */}
-          <IconButton noHover name='help' iconType="round" iconClass="text-discord-gray-2" />
+          <IconButton noHover name='help' iconType="round" iconClass="text-discord-gray-2 hover:text-discord-gray
+hover:text-discord-gray
+hover:text-discord-gray
+hover:text-discord-gray" />
         </div>
       </div>
       {/* CHANNEL + USERS */}

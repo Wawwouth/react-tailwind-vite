@@ -16,10 +16,10 @@ function ChannelHeader({ channel }: ChannelHeaderProps) {
         </span>
       </div>
       <div className="flex gap-x-1">
-        <IconButton noHover name='question_answer' iconType="round" iconClass="text-discord-gray-2" />
-        <IconButton noHover name='notifications_off' iconType="round" iconClass="text-discord-gray-2" />
-        <IconButton noHover name='push_pin' iconType="round" iconClass="text-discord-gray-2" />
-        <IconButton noHover name='people' iconType="round" iconClass="text-discord-gray-2" />
+        <IconButton noHover name='question_answer' iconType="round" iconClass="text-discord-gray-2 hover:text-discord-gray" />
+        <IconButton noHover name='notifications_off' iconType="round" iconClass="text-discord-gray-2 hover:text-discord-gray" />
+        <IconButton noHover name='push_pin' iconType="round" iconClass="text-discord-gray-2 hover:text-discord-gray" />
+        <IconButton noHover name='people' iconType="round" iconClass="text-discord-gray-2 hover:text-discord-gray" />
       </div>
     </div>
   )
