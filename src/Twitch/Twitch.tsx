@@ -7,8 +7,13 @@ import ChannelsGrid from './ChannelsGrid'
 import SideBar from './SideBar'
 
 import './Twitch.css'
+import { useEffect } from 'react'
 
 function Twitch() {
+  useEffect(() => {
+    document.title = 'Fowtch'
+  }, [])
+
   return (
     <div className='twitch-page
       h-full w-full bg-twitch-gray text-white overflow-hidden
