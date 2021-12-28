@@ -1,14 +1,17 @@
 import { v4 as uuid } from "uuid"
 import { ServerData } from "./dummy_data"
+import * as generators from "./RandomAvatar"
+
+const pictureTypes = Object.values(generators)
+  .filter(g => [generators.randomGridy, generators.randomBottts, generators.randomIdenticon].includes(g))
 
 export type ServerIconProps = React.HTMLAttributes<HTMLDivElement> & {
   server: ServerData;
   current?: boolean;
 }
 
-const pictureTypes = ['gridy', 'bottts', 'identicon']
-
 function ServerIcon({ server, current, ...props }: ServerIconProps) {
+  const svg = pictureTypes[Math.floor(Math.random() * pictureTypes.length)](uuid())
   return (
     <div {...props} className="w-full flex items-center content-center relative">
       {/* Server icon */}
@@ -18,7 +21,7 @@ function ServerIcon({ server, current, ...props }: ServerIconProps) {
       bg-discord-gray-3
       `}
       >
-        <div className="h-full w-full bg-contain" style={{backgroundImage: server.icon ? `url('${server.icon}')` : `url('https://avatars.dicebear.com/api/${pictureTypes[Math.floor(Math.random() * pictureTypes.length)]}/${uuid()}.svg')`}}></div>
+        <div className="h-full w-full bg-contain" style={{backgroundImage: server.icon ? `url('${server.icon}')` : `url('data:image/svg+xml;utf8,${encodeURIComponent(svg)}')`}}></div>
       </div>
       {/* Left cursor */}
       <div className={`w-1/5 aspect-square bg-white 
