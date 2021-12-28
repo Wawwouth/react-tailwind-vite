@@ -17,6 +17,51 @@ export type ChannelData = {
   unread?: boolean;
 }
 
+export type UserData = {
+  username: string;
+  icon?: string;
+  status?: string;
+}
+
+export type ServerRole = {
+  name: string;
+  color?: string;
+  users: UserData[]
+}
+
+export const roles: ServerRole[] = [
+  {
+    name: 'GARDIENS DE ZOO', 
+    color: '#71368A',
+    users: [
+      {username: 'bandef', status: 'small status'},
+      {username: 'Sarakzite', status: 'very long status to test x-overflow'},
+    ]
+  },
+  {
+    name: 'FRÈRES DE BOLOSSAGE', 
+    color: '#206694',
+    users: [
+      {username: 'Aliatil'},
+      {username: 'Bloos'},
+      {username: 'Chap'},
+      {username: 'Feunin'},
+      {username: 'Memori'},
+    ]
+  },
+  {
+    name: 'LES GENTILS MEMBRES', 
+    color: '#992D22',
+    users: [
+      {username: '7IBO'},
+      {username: 'Ace'},
+      {username: 'Acoodoir/Kenny'},
+      {username: 'AkwaTiikzZ', status: 'Joue à World of Warcraft Classic'},
+      {username: 'zzZzzZzzzZZzZzzzzZZZZZzzzzZZz'},
+    ]
+  },
+]
+
 export type ServerData = {
   name: string;
   icon?: string;
@@ -37,8 +82,8 @@ export const data: DiscrodDataType = {
       {name: "règles"},
       {name: "THÈMES", channels: [{name: "art"}, {name: "finance", unread: true}, {name: "musiciens"}, {name: "entrepreunariat"}]},
       {name: "ENTRAIDE", channels: [{name: "aide_aux_devoirs"}, {name: "aide_informatique"}, {name: "aide_programmation"}]},
-      {name: "ENTRAIDE2", channels: [{name: "aide_aux_devoirs"}, {name: "aide_informatique"}, {name: "aide_programmation"}]},
-      {name: "ENTRAIDE3", channels: [{name: "aide_aux_devoirs"}, {name: "aide_informatique"}, {name: "aide_programmation"}]},
+      {name: "ENTRAIDE 2", channels: [{name: "aide_aux_devoirs"}, {name: "aide_informatique"}, {name: "aide_programmation"}]},
+      {name: "ENTRAIDE 3", channels: [{name: "aide_aux_devoirs"}, {name: "aide_informatique"}, {name: "aide_programmation"}]},
     ]},
     {name: "Serv 4", banner, channels: []},
     {name: "Serv 5", banner, channels: []},
