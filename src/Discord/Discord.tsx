@@ -19,7 +19,7 @@ function Discord() {
   }, [])
 
   return (
-    <div className='
+    <div className='discord
       h-full w-full bg-discord-gray-7 text-white overflow-hidden
       flex
     '>
