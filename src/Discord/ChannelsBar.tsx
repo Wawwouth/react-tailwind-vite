@@ -15,6 +15,7 @@ function ChannelsBar({server}: ChannelsBarProps) {
     */
     <div className={`
     hidden lg:flex flex-col w-64 shrink-0 overflow-hidden
+    select-none
     bg-discord-gray-8 
     rounded-tl-xl
     `}>
