@@ -5,3 +5,11 @@
   --font-headline: Ginto Nord, Ginto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-primary);
 }
+
+.discord * {
+  scrollbar-width: none;
+  scrollbar-gutter: stable;
+}
+.discord *:hover {
+  scrollbar-width: thin;
+}
