@@ -1,7 +1,32 @@
 .discord * {
   scrollbar-width: none;
-  scrollbar-gutter: stable;
 }
-.discord *:hover {
+.discord *:not(.without-scrollbar):hover {
   scrollbar-width: thin;
+}
+
+.discord ::-webkit-scrollbar {
+  width: 0.50rem;
+  display: none;
+  /* background: theme('colors.discord-gray-5'); */
+  background-color: transparent;
+}
+.discord .scrollable::-webkit-scrollbar, 
+.discord .scrollable::-webkit-scrollbar-thumb {
+  display: block;
+}
+.discord *:not(.without-scrollbar):hover::-webkit-scrollbar {
+  display: block;
+}
+.discord ::-webkit-scrollbar-thumb {
+  display: none;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  background-clip: content-box;
+  background-color: theme('colors.discord-gray-10');
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.discord *:not(.without-scrollbar):hover::-webkit-scrollbar-thumb {
+  display: block;
 }
