@@ -12,14 +12,11 @@ function UserListItem({ user, role }: UserListItemProps) {
       rounded-md
       hover:bg-discord-gray-7 cursor-pointer
     ">
-      <ProfileIcon />
+      <ProfileIcon status className="shrink-0" />
       <div className="grow flex flex-col overflow-hidden">
         <span
           title={user.username}
-          className="
-          text-sm font-semibold
-          text-ellipsis whitespace-nowrap overflow-hidden
-          "
+          className="text-sm font-semibold text-ellipsis whitespace-nowrap overflow-hidden"
           style={{ color: role?.color ?? 'theme(colors.discord-gray-2)' }}
         >
           {user.username}
