@@ -9,20 +9,23 @@ const pictureTypes = Object.values(generators)
 type ProfileIconProps = {
   user?: UserData;
   className?: string;
+  status?: boolean;
 }
 
-function ProfileIcon({ user, className }: ProfileIconProps) {
+function ProfileIcon({ user, status, className }: ProfileIconProps) {
   const [icon, setIcon] = useState<string>(user?.icon ?? pictureTypes[Math.floor(Math.random() * pictureTypes.length)](uuid()))
   return (
-    <button className={`relative ${className ?? ''}`}>
+    <button className={`w-7 aspect-square relative ${className ?? ''}`}>
       <div 
-      className={`w-7 aspect-square bg-white bg-contain bg-no-repeat rounded-full grid items-center`}
+      className={`w-full aspect-square bg-white bg-contain bg-no-repeat rounded-full grid items-center`}
       style={{backgroundImage: `url('data:image/svg+xml;utf8,${encodeURIComponent(icon)}')`}}
       >
       </div>
-      <div className={`flex items-center justify-center absolute bottom-[-6%] right-[-6%] w-1/2 aspect-square bg-gray-400 rounded-full border-discord-gray-9 border-2`}>
-        <div className="w-3/5 aspect-square rounded-full bg-discord-gray-9"></div>
-      </div>
+      {status && (
+        <div className={`flex items-center justify-center absolute bottom-[-6%] right-[-6%] w-1/2 aspect-square bg-gray-400 rounded-full border-discord-gray-9 border-2`}>
+          <div className="w-3/5 aspect-square rounded-full bg-discord-gray-9"></div>
+        </div>
+      )}
     </button>
   )
 }
