@@ -35,7 +35,9 @@ export const roles: ServerRole[] = [
     color: '#71368A',
     users: [
       {username: 'bandef', status: 'small status'},
+      {username: 'Niromane', status: 'Joue à League of Legends'},
       {username: 'Sarakzite', status: 'very long status to test x-overflow'},
+      {username: 'Spenc'},
     ]
   },
   {
