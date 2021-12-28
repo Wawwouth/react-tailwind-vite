@@ -9,6 +9,10 @@ import { data } from "./dummy_data"
 function Discord() {
   const [currentServer, setCurrentServer] = useState<number>(2)
   const [currentChannel, setCurrentChannel] = useState<number>(0)
+
+  useEffect(() => {
+    document.title = 'Thiscord'
+  }, [])
   
   const serverSelected = useCallback((index: number) => {
     setCurrentServer(index)
