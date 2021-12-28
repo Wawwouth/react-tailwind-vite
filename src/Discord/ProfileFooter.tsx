@@ -7,7 +7,7 @@ function ProfileFooter() {
     bg-discord-gray-9
     `}>
       <div className='grow min-w-0 flex items-center gap-x-2'>
-        <ProfileIcon className='hover:brightness-90' />
+        <ProfileIcon className='hover:brightness-90' status />
         <div className='grow min-w-0 flex flex-col leading-tight py-1.5 font-bold text-sm'>
           <span className='cursor-pointer'>Username</span>
           <div className='text-xs flex flex-col text-discord-gray-3 h-4 overflow-hidden'>
