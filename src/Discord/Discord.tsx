@@ -3,6 +3,10 @@ import ChannelContainer from "./ChannelContainer"
 import ChannelsBar from "./ChannelsBar"
 import ServerBar from "./ServerBar"
 
+import dayjs from "dayjs"
+import relativeTime from 'dayjs/plugin/relativeTime'
+dayjs.extend(relativeTime)
+
 import { data } from "./dummy_data"
 
 function Discord() {
