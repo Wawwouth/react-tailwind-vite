@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { v4 as uuid } from "uuid"
 import { ServerData } from "./dummy_data"
 import * as generators from "./RandomAvatar"
@@ -11,7 +12,7 @@ export type ServerIconProps = React.HTMLAttributes<HTMLDivElement> & {
 }
 
 function ServerIcon({ server, current, ...props }: ServerIconProps) {
-  const svg = pictureTypes[Math.floor(Math.random() * pictureTypes.length)](uuid())
+  const [icon, setIcon] = useState<string>(server.icon ?? pictureTypes[Math.floor(Math.random() * pictureTypes.length)](uuid()))
   return (
     <div {...props} className="w-full flex items-center content-center relative">
       {/* Server icon */}
@@ -21,7 +22,7 @@ function ServerIcon({ server, current, ...props }: ServerIconProps) {
       bg-discord-gray-3
       `}
       >
-        <div className="h-full w-full bg-contain" style={{backgroundImage: server.icon ? `url('${server.icon}')` : `url('data:image/svg+xml;utf8,${encodeURIComponent(svg)}')`}}></div>
+        <div className="h-full w-full bg-contain" style={{backgroundImage: server.icon ? `url('${server.icon}')` : `url('data:image/svg+xml;utf8,${encodeURIComponent(icon)}')`}}></div>
       </div>
       {/* Left cursor */}
       <div className={`w-1/5 aspect-square bg-white 
