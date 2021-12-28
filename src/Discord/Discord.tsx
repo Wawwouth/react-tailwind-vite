@@ -26,7 +26,7 @@ function Discord() {
       <ServerBar current={currentServer} onServerSelect={serverSelected} />
       <main className="grow flex">
         <ChannelsBar server={data.servers[currentServer]} />
-        <ChannelContent channel={data.servers[currentServer].channels[currentChannel]} />
+        <ChannelContainer channel={data.servers[currentServer].channels[currentChannel]} />
       </main>
     </div>
   )
