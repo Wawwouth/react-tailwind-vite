@@ -1,5 +1,6 @@
 import MaterialIcon from "shared/MaterialIcon"
 import IconButton from "Twitch/IconButton"
+import ChannelContent from "./ChannelContent"
 import ChannelHeader from "./ChannelHeader"
 import { ChannelData } from "./dummy_data"
 import UsersList from "./UsersList"
@@ -50,10 +51,11 @@ function ChannelContainer({ channel }: ChannelContainerProps) {
       </div>
       {/* CHANNEL + USERS */}
       <div className="grow flex justify-between overflow-hidden">
-        <div className="grow p-1">
-          {/* < channel={channel} /> */}
-          CONTENT
-          <div className="bg-black font-semibold text-discord-gray">gray</div>
+        <ChannelContent
+          channel={channel}
+          className="grow"
+        />
+        {/* <div className="bg-black font-semibold text-discord-gray">gray</div>
           <div className="bg-black font-semibold text-discord-gray-2">gray-2</div>
           <div className="bg-black font-semibold text-discord-gray-3">gray-3</div>
           <div className="bg-black font-semibold text-discord-gray-4">gray-4</div>
@@ -62,8 +64,7 @@ function ChannelContainer({ channel }: ChannelContainerProps) {
           <div className="bg-black font-semibold text-discord-gray-7">gray-7</div>
           <div className="bg-black font-semibold text-discord-gray-8">gray-8</div>
           <div className="bg-black font-semibold text-discord-gray-9">gray-9</div>
-          <div className="bg-black font-semibold text-discord-gray-10">gray-10</div>
-        </div>
+          <div className="bg-black font-semibold text-discord-gray-10">gray-10</div> */}
         <UsersList />
       </div>
     </div>
