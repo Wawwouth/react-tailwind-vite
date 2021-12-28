@@ -10,7 +10,7 @@ export type ServerBarProps = {
 
 function ServerBar({current, onServerSelect}: ServerBarProps) {
   return (
-    <nav className="shrink-0 flex flex-col gap-y-2 w-16 p-1 px-2.5 overflow-y-auto ![scrollbar-width:none]">
+    <nav className="shrink-0 flex flex-col gap-y-2 w-16 p-1 px-2.5 overflow-y-auto without-scrollbar">
       <HomeIcon />
       <hr className="border-t border-discord-gray-5 w-2/3 mx-auto" />
       {data.servers.map((server, i) => (
