@@ -12,7 +12,7 @@ function HomeIcon({ current }: HomeIconProps) {
       <div className={`w-full aspect-square cursor-pointer p-2 peer
       [transition:border-radius_linear_0.3s_,_background-color_ease_0.5s]
       border border-transparent rounded-[24px] hover:rounded-2xl
-      bg-discord-gray-3 hover:bg-discord-blue
+      bg-discord-gray-5 hover:bg-discord-blue
       `}>
         <div className="h-full w-full bg-contain bg-no-repeat" style={{backgroundImage: `url('${discord}')`}}></div>
       </div>

@@ -10,7 +10,7 @@ function ChannelHeader({ channel }: ChannelHeaderProps) {
   return (
     <div className="grow flex items-center justify-between p-1 px-4">
       <div className="flex items-center gap-x-2">
-        <MaterialIcon name='numbers' className="text-discord-gray-unread" />
+        <MaterialIcon name='numbers' className="text-discord-gray-4" />
         <span className="text-base font-semibold">
           {channel.name}
         </span>

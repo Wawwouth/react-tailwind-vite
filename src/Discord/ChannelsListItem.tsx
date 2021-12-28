@@ -8,13 +8,13 @@ export type ChannelsListItemProps = {
 function ChannelsListItem({ channel }: ChannelsListItemProps) {
   return !isChannelGroup(channel) ? (
     <div className="flex items-center relative
-      text-base font-semibold text-discord-gray-2
+      text-[16px] font-semibold text-discord-gray-2
       "
     >
       <div className={`
-        flex grow py-1 mx-2 px-2 gap-1 hover:bg-discord-gray-hover cursor-pointer
+        flex grow py-1 mx-2 px-2 gap-1 hover:bg-discord-gray-7 cursor-pointer
         rounded-sm
-        ${channel.unread ? 'text-discord-gray-2' : 'text-discord-gray-unread'}
+        ${channel.unread ? 'text-discord-gray' : 'text-discord-gray-3'}
       `}>
         <MaterialIcon name='numbers' iconType="round" />
         <span>{channel.name}</span>
@@ -28,8 +28,8 @@ function ChannelsListItem({ channel }: ChannelsListItemProps) {
       `}></div>
     </div>
   ) : (
-    <div className="text-sm font-semibold text-discord-gray-2 py-2">
-      <span className="px-2">{channel.name}</span>
+    <div className="text-discord-gray-2 py-2">
+      <span className="px-2 text-[12px] font-semibold font-discord-display">{channel.name}</span>
       {channel.channels.map((channel) => (
         <ChannelsListItem channel={channel} />
       ))}

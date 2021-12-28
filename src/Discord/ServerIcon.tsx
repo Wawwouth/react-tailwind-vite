@@ -19,7 +19,7 @@ function ServerIcon({ server, current, ...props }: ServerIconProps) {
       <div className={`w-full aspect-square cursor-pointer p-1 peer overflow-hidden
       [transition:border-radius_linear_0.3s]
       border border-transparent rounded-[24px] hover:rounded-2xl
-      bg-discord-gray-3
+      bg-discord-gray-5
       `}
       >
         <div className="h-full w-full bg-contain" style={{backgroundImage: server.icon ? `url('${server.icon}')` : `url('data:image/svg+xml;utf8,${encodeURIComponent(icon)}')`}}></div>
