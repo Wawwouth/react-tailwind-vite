@@ -36,18 +36,20 @@ function ChannelContent({ channel }: ChannelContentProps) {
           </div>
           {/* INBOX */}
           <IconButton noHover name='inbox' iconType="round" iconClass="text-discord-gray-2 hover:text-discord-gray
-hover:text-discord-gray
-hover:text-discord-gray
-hover:text-discord-gray" />
+            hover:text-discord-gray
+            hover:text-discord-gray
+            hover:text-discord-gray"
+          />
           {/* HELP */}
           <IconButton noHover name='help' iconType="round" iconClass="text-discord-gray-2 hover:text-discord-gray
-hover:text-discord-gray
-hover:text-discord-gray
-hover:text-discord-gray" />
+            hover:text-discord-gray
+            hover:text-discord-gray
+            hover:text-discord-gray"
+          />
         </div>
       </div>
       {/* CHANNEL + USERS */}
-      <div className=" grow flex justify-between">
+      <div className="grow flex justify-between overflow-hidden">
         <div className="grow p-1">
           CONTENT
         </div>
