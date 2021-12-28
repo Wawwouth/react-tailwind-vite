@@ -14,7 +14,7 @@ function App() {
             <Route
               path={path}
               element={
-                <React.Suspense fallback={<>loading...</>}>
+                <React.Suspense fallback={<div className='h-full w-full grid place-items-center bg-gray-900 text-white'>loading...</div>}>
                   {element}
                 </React.Suspense>
               }
