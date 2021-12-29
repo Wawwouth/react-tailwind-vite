@@ -1,5 +1,5 @@
 import MobileView from 'MobileView/MobileView'
-import React, { FunctionComponent, useEffect, useState } from 'react'
+import React, { FunctionComponent, HTMLAttributes, useEffect, useState } from 'react'
 import MobileAppIcon from 'MobileView/MobileAppIcon'
 import call from 'resources/img/call.svg'
 import internet from 'resources/img/internet.svg'
@@ -10,32 +10,12 @@ import camera from 'resources/img/camera.svg'
 import gps from 'resources/img/gps.svg'
 import mail from 'resources/img/mail_white.svg'
 import settings from 'resources/img/settings.svg'
-import MobileHeader from 'MobileView/MobileHeader'
 import dayjs from 'dayjs'
 
-const Wrapper: FunctionComponent = (props) => (
-  <div className='h-full w-full grid place-items-center overflow-hidden bg-blue-900'>
-    <MobileView>
-      {props.children}
-    </MobileView>
-  </div>
-)
-
 function HomeMobile() {
-  const [now, setNow] = useState(dayjs())
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setNow(dayjs())
-    }, 1000)
-    return () => {
-      clearInterval(interval)
-    }
-  }, [])
-
   return (
-    <Wrapper>
-      <div className={`h-full w-full flex flex-col bg-[url('/src/resources/img/wallpaper.jpg')] bg-cover font-sans select-none`}>
-        <MobileHeader hour={now.format('HH:mm')} />
+    <MobileView className="bg-[url('/src/resources/img/wallpaper.jpg')] bg-cover">
+      <div className={`h-full w-full flex flex-col font-sans select-none`}>
         <nav className='flex-grow flex flex-col mt-6'>
           <div className='flex-grow grid grid-cols-4 grid-rows-6 px-1'>
             <MobileAppIcon src={call} title="Appel" className='bg-green-600' />
@@ -59,7 +39,7 @@ function HomeMobile() {
           <MobileAppIcon src={music} className='bg-[#6d4cc7]' />
         </footer>
       </div>
-    </Wrapper>
+    </MobileView>
   )
 }
 
