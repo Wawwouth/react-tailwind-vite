@@ -12,7 +12,7 @@ function ServerBanner({ server }: ServerBannerProps) {
 
   return (
     <div 
-      className={`${server.banner ? 'items-start aspect-video bg-contain bg-no-repeat' : 'items-center h-12'} 
+      className={` shrink-0 ${server.banner ? 'items-start aspect-video bg-contain bg-no-repeat' : 'items-center h-12'} 
         border-b border-discord-gray-10
         [transition:background-color_ease_0.5s]
         ${expanded ? '' : 'hover:bg-discord-gray-6'}
